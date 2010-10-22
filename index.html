@@ -1,0 +1,29 @@
+<doctype html>
+<html>
+  <head>
+    <title>delicious reader</title>
+	<script type="text/javascript">
+window.addEventListener("load", function(){
+	
+    var theButton;
+
+    var UIItemProperties = { // options for the button
+      	disabled: false,
+      	title: "delicious reader",
+      	popup: {
+        	href: "reader.html",
+        	width: "400px",
+        	height: "400px"
+      	},
+		onclick: function() {
+			alert("hoge");
+		}
+    }
+
+    theButton = opera.contexts.toolbar.createItem( UIItemProperties ); // create the button
+    opera.contexts.toolbar.addItem( theButton ); // add button to UI
+
+}, false);
+	</script>
+  </head>
+</html>

@@ -1,0 +1,42 @@
+﻿<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>delicius reader</title>
+</head>
+<body>
+	<h1>Deliciuos Reader</h1>
+	<ul id="items">
+		<li>loading ...</li>
+	</ul>
+	<script type="text/javascript">
+	function displayFeed(data) {
+		var ul = document.getElementById("items");
+		ul.innerHTML = "";
+		data.forEach(function(i) {
+//			opera.postError(i.u + ": " + i.d);
+			var li = document.createElement("li");
+			var a = document.createElement("a");
+				a.href = i.u;
+				a.target = "_blank";
+				a.innerHTML = i.d;
+				li.appendChild(a);
+			ul.appendChild(li);
+		});
+	}
+	window.addEventListener('scroll', function(e) {
+		e.stopPropagation();
+	}, false);
+	window.addEventListener('load', function() {
+		var username = "higeorange";
+//		if(username = localStorage["username"]) {
+			var script = document.createElement("script");
+				script.type = "text/javascript";
+				script.src = "http://feeds.delicious.com/v2/json/" + username + "?callback=displayFeed";
+				document.body.appendChild(script);
+//		} else {
+//		}
+	}, false);
+	</script>
+</body>
+</html>
