@@ -1,6 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget xmlns="http://www.w3.org/ns/widgets" id="extensions:delicious-extension">
+<widget xmlns="http://www.w3.org/ns/widgets">
   <name>Delicious reader</name>
   <description>display recent bookmark on your delicious</description>
-  <author>Sumada Kyosuke (Higeorange)</author>
+  <author href="http://higeorange.com/">Sumada Kyosuke (Higeorange)</author>
+  <icon src="icon.png" /> <!-- i will make it !!-->
 </widget>
